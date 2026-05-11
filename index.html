@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bloom</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <h1><Welcome to our girly self care website!></h1>
+    <h2>Our Mission</h2>
+    <p>At Bloom, we believe that self-care is essential for everyone, especially for young women who face unique challenges in their daily lives.</p>
+    <img src="images/self-care.png" alt="Self Care Girl" width="250">
+    <section class="hero">
+
+    <h2>Your Safe Space 🌸</h2>
+
+    <p>
+        Track your mood, take care of yourself,
+        and bloom a little every day 💖
+    </p>
+
+    <button>Start Your Day</button>
+
+</section>
+ <!-- Mood Tracker -->
+
+    <section class="mood">
+
+        <h2>How are you feeling today? 💭</h2>
+
+        <div class="mood-buttons">
+
+         <button data-mood="happy">😀</button>
+<button data-mood="calm">😌</button>
+<button data-mood="sad">😢</button>
+<button data-mood="angry">😡</button>
+<button data-mood="tired">😴</button>
+
+        </div>
+
+        <p id="mood-message"></p>
+
+    </section>
+    <!-- Water Tracker -->
+
+<section class="water">
+
+    <h2>Water Intake 💧</h2>
+
+    <p>
+        Cups Drank:
+        <span id="count">0</span> / 8
+    </p>
+
+    <button onclick="addWater()">+ Add Cup</button>
+
+</section>
+<section class="checklist">
+
+    <h2>Self Care Checklist ✨</h2>
+
+    <label>
+        <input type="checkbox">
+        Drank Water 💧
+    </label>
+
+    <br><br>
+
+    <label>
+        <input type="checkbox">
+        Studied 📚
+    </label>
+
+    <br><br>
+
+    <label>
+        <input type="checkbox">
+        Prayed 🤍
+    </label>
+
+    <br><br>
+
+    <label>
+        <input type="checkbox">
+        Took Care of Myself 🌸
+    </label>
+
+</section>
+
+    <!-- JavaScript -->
+
+    <script>
+
+        function showMood(mood) {
+
+            let message = "";
+
+            if (mood === "happy") {
+                message = "Keep shining beautiful 💖";
+            }
+
+            else if (mood === "calm") {
+                message = "Peace looks good on you 🌸";
+            }
+
+            else if (mood === "sad") {
+                message = "It’s okay to rest today 💕";
+            }
+
+            else if (mood === "angry") {
+                message = "Take a deep breath ✨";
+            }
+
+            else if (mood === "tired") {
+                message = "You deserve some rest 😴";
+            }
+
+            document.getElementById("mood-message").innerHTML = message;
+        }
+        const buttons = document.querySelectorAll(".mood-buttons button");
+
+buttons.forEach(button => {
+    button.addEventListener("click", function () {
+        let mood = this.getAttribute("data-mood");
+        showMood(mood);
+    });
+});
+        let waterCount = 0;
+
+function addWater(){
+
+    if(waterCount < 8){
+
+        waterCount++;
+
+        document.getElementById("count").innerHTML = waterCount;
+    }
+
+}
+
+    </script>
+
+</body>
+</html>

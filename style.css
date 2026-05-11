@@ -1,0 +1,56 @@
+body{
+    background-color: #fffaf5;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    color: #d46a92;
+    margin-top: 30px;
+}
+
+.hero{
+    background-color: #f8c8dc;
+    margin: 40px;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+button{
+    background-color: #d46a92;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover{
+    background-color: #b84f78;
+}
+.mood{
+    margin: 40px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.mood-buttons button{
+    font-size: 30px;
+    margin: 10px;
+}
+.water{
+    background-color: white;
+    margin: 40px;
+    padding: 30px;
+    border-radius: 20px;
+}
+.checklist{
+    background-color: #f8c8dc;
+    margin: 40px;
+    padding: 30px;
+    border-radius: 20px;
+}
